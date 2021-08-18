@@ -77,10 +77,12 @@ route.post('/login', (req, res) => {
       const rule = {
         id: data._id,
         name: data.name,
+        avatar: data.avatar,
         identify: data.identify
       }
+      // console.log(rule);
       jwt.sign(rule, keys.secretOrKey, {
-        expiresIn: 1000 * 60 * 60
+        expiresIn: 3600 * 24 * 7
       }, (err, token) => {
         if (err) throw err;
         res.json({

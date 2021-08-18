@@ -19,15 +19,16 @@ route.get('/test', (req, res) => {
 //@access private
 route.post('/add', auth, (req, res) => {
   const {
-    tyep,
+    type,
     describe,
     income,
     expend,
     cash,
     remark
   } = req.body
+  // console.log(req.body);
   const profiles = {}
-  if (tyep) profiles.type = type
+  if (type) profiles.type = type
   if (describe) profiles.describe = describe
   if (income) profiles.income = income
   if (expend) profiles.expend = expend
@@ -75,7 +76,7 @@ route.get('/:id', auth, (req, res) => {
 //@access private
 route.post('/edit/:id', auth, (req, res) => {
   const {
-    tyep,
+    type,
     describe,
     income,
     expend,
@@ -83,7 +84,7 @@ route.post('/edit/:id', auth, (req, res) => {
     remark
   } = req.body
   const profiles = {}
-  if (tyep) profiles.type = type
+  if (type) profiles.type = type
   if (describe) profiles.describe = describe
   if (income) profiles.income = income
   if (expend) profiles.expend = expend
