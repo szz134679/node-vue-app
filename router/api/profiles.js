@@ -7,12 +7,12 @@ const auth = require('../../config/auth.js')
 // 创建路由对象
 const route = express.Router()
 // 创建get方法,路径：api/users/test
-route.get('/test', (req, res) => {
-  // 发送一个json数据
-  res.json({
-    "name": "szz"
-  })
-})
+// route.get('/test', (req, res) => {
+//   // 发送一个json数据
+//   res.json({
+//     "name": "szz"
+//   })
+// })
 
 //$route post api/profile/add
 //@desc 添加信息数据接口
